@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +31,7 @@
     /* Hero Section */
     .hero-section {
       background: #f8f9fa;
-      padding: 120px 0 80px;
+      padding: 120px 0 30px;
       position: relative;
     }
 
@@ -70,9 +71,11 @@
       .hero-section {
         text-align: center;
       }
+
       .hero-text {
         margin-top: 2rem;
       }
+
       .hero-subtitle {
         margin-left: auto;
         margin-right: auto;
@@ -105,7 +108,7 @@
     }
 
     .nav-link:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       transform: translateY(-2px);
     }
 
@@ -147,12 +150,12 @@
       border-radius: 15px;
       overflow: hidden;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
     .card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
     .card-body {
@@ -229,8 +232,15 @@
 
     /* Animations */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .animate-fade-in {
@@ -244,6 +254,7 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
   <!-- Navbar -->
@@ -300,12 +311,15 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <p class="lead mb-4" style="color: #000000; text-align: justify;">
-          Hello! I'm Reza, a passionate AI engineer and researcher with a strong focus on deep learning, model optimization, and large language models across all modalities.
+          Hello! I'm Reza, a passionate AI engineer and researcher with a strong focus on deep learning, model
+          optimization, and large language models across all modalities.
           I thrive on challenges and love pushing the boundaries of what's possible with efficient ML systems.
         </p>
         <p class="lead" style="color: #000000; text-align: justify;">
-          I'm a self-learner and a proactive problem solver, always exploring new techniques and tools to improve performance and scalability.
-          My work spans pruning, quantization, and deployment of transformer-based models, especially in real-world constrained environments.
+          I'm a self-learner and a proactive problem solver, always exploring new techniques and tools to improve
+          performance and scalability.
+          My work spans pruning, quantization, and deployment of transformer-based models, especially in real-world
+          constrained environments.
         </p>
       </div>
     </div>
@@ -313,20 +327,22 @@
 
   <!-- Projects -->
   <section id="projects" class="container">
-    <h2 class="section-title text-center">Projects</h2>
+    <h2 class="section-title text-center">Selected Projects</h2>
     <div class="row g-4">
       <!-- Project 1 -->
       <div class="col-md-6">
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Parallel matrix-vector multiplication on GPU</h5>
-            <p class="card-text">Performing matrix-vector multiplication using row-wise decomposition on GPU and measuring the speedup.</p>
+            <p class="card-text">Performing matrix-vector multiplication using row-wise decomposition on GPU and
+              measuring the speedup.</p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
                 <span class="badge bg-primary me-2">CUDA</span>
                 <span class="badge bg-secondary">C</span>
               </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Read More</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Read
+                More</button>
             </div>
           </div>
         </div>
@@ -337,14 +353,16 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Iris dataset analysis using SVM and Neural Networds</h5>
-            <p class="card-text">The primary focus of this project is on data visualization, training Support Vector Machine (SVM) models, and building a neural network for classification tasks.</p>
+            <p class="card-text">The primary focus of this project is on data visualization, training Support Vector
+              Machine (SVM) models, and building a neural network for classification tasks.</p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
                 <span class="badge bg-primary me-2">Python</span>
                 <span class="badge bg-secondary">Machine Learning</span>
                 <span class="badge bg-secondary">Neural Network</span>
               </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Read More</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Read
+                More</button>
             </div>
           </div>
         </div>
@@ -355,7 +373,8 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">CNN acceleration on edge devices</h5>
-            <p class="card-text">Deploying a CNN model on Kria KV260 edge device and measuring the inference performance.</p>
+            <p class="card-text">Deploying a CNN model on Kria KV260 edge device and measuring the inference
+              performance.</p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
                 <span class="badge bg-primary me-2">Python</span>
@@ -363,7 +382,8 @@
                 <span class="badge bg-secondary">Bash</span>
                 <span class="badge bg-secondary">Linux</span>
               </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Read More</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Read
+                More</button>
             </div>
           </div>
         </div>
@@ -381,11 +401,56 @@
                 <span class="badge bg-info">C</span>
                 <span class="badge bg-secondary">Distributed Systems</span>
               </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project4Modal">Read More</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project4Modal">Read
+                More</button>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">End-to-End AlexNet Training and Quantization on CIFAR-10</h5>
+            <p class="card-text">Complete pipeline for training, quantizing, and testing an AlexNet model on CIFAR-10
+              dataset using PyTorch and Vitis AI.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">Python</span>
+                <span class="badge bg-primary me-2">PyTorch</span>
+                <span class="badge bg-secondary">CNN</span>
+                <span class="badge bg-secondary">Quantization</span>
+              </div>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project5Modal">Read
+                More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">High-Precision Arithmetic Engine in C++</h5>
+            <p class="card-text">Designed and developed a C++ engine for performing arithmetic operations on extremely large integers (up to 200 digits), bypassing the limitations of built-in data types.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">C++</span>
+                <span class="badge bg-primary me-2">Arithmetic</span>
+                <span class="badge bg-secondary">Algorithms</span>
+              </div>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project6Modal">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="https://github.com/rezajahadi" target="_blank" class="btn btn-outline-primary btn-lg">
+        <i class="bi bi-github me-2"></i>View More Projects on GitHub
+      </a>
     </div>
   </section>
 
@@ -398,15 +463,18 @@
         <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Low-Power Register File for Tensor Cores</h5>
-            <h6 class="card-subtitle mb-3 text-muted">2024 IEEE 15th International Green and Sustainable Computing Conference (IGSC)</h6>
+            <h6 class="card-subtitle mb-3 text-muted">2024 IEEE 15th International Green and Sustainable Computing
+              Conference (IGSC)</h6>
             <p class="card-text">
               <small class="text-muted">
                 <i class="bi bi-people me-1"></i>Authors: Reza Jahadi, Ehsan Atoofian
               </small>
             </p>
             <p class="card-text">
-              We propose a value-aware register file design for Tensor Cores that leverages the bit-level sparsity in CNNs to reduce leakage power. 
-              By introducing LPS, LPS+, and PLPS+ SRAM cells, we achieve up to 77.3% power savings with negligible accuracy loss.
+              We propose a value-aware register file design for Tensor Cores that leverages the bit-level sparsity in
+              CNNs to reduce leakage power.
+              By introducing LPS, LPS+, and PLPS+ SRAM cells, we achieve up to 77.3% power savings with negligible
+              accuracy loss.
             </p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
@@ -414,7 +482,8 @@
                 <span class="badge bg-secondary me-2">GPU Tensor Cores</span>
                 <span class="badge bg-info">Computer Architecture</span>
               </div>
-              <a href="https://ieeexplore.ieee.org/abstract/document/10765817" target="_blank" class="btn btn-outline-primary">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10765817" target="_blank"
+                class="btn btn-outline-primary">
                 <i class="bi bi-file-earmark-text me-1"></i>Paper
               </a>
             </div>
@@ -434,8 +503,10 @@
               </small>
             </p>
             <p class="card-text">
-              We present PCTC, a co-designed hardware-software approach that enables efficient execution of Capsule Networks on NVIDIA Tensor Cores. 
-              By rearchitecting matrix-vector operations and introducing structured pruning tailored to capsule layers, PCTC achieves up to 31% energy savings.
+              We present PCTC, a co-designed hardware-software approach that enables efficient execution of Capsule
+              Networks on NVIDIA Tensor Cores.
+              By rearchitecting matrix-vector operations and introducing structured pruning tailored to capsule layers,
+              PCTC achieves up to 31% energy savings.
             </p>
             <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
@@ -443,7 +514,8 @@
                 <span class="badge bg-secondary me-2">Tensor Core Optimization</span>
                 <span class="badge bg-info">GPU</span>
               </div>
-              <a href="https://link.springer.com/chapter/10.1007/978-3-031-69766-1_14" target="_blank" class="btn btn-outline-primary">
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-69766-1_14" target="_blank"
+                class="btn btn-outline-primary">
                 <i class="bi bi-file-earmark-text me-1"></i>Paper
               </a>
             </div>
@@ -462,8 +534,8 @@
           <div class="card-body">
             <h5 class="card-title mb-3"><i class="bi bi-film me-2"></i>Movies</h5>
             <p class="card-text">
-              I'm a big fan of movies, especially thriller and mystery genres. I enjoy stories that keep me guessing, with clever plot twists, psychological depth, and suspenseful narratives.
-              Films like Prisoners, Gone Girl, and The Prestige fascinate me with their intricate storytelling and character development.
+              I'm a big fan of movies, especially thriller and mystery genres. I enjoy stories that keep me guessing,
+              with clever plot twists, psychological depth, and suspenseful narratives.
             </p>
           </div>
         </div>
@@ -471,8 +543,9 @@
           <div class="card-body">
             <h5 class="card-title mb-3"><i class="bi bi-globe me-2"></i>Travel</h5>
             <p class="card-text">
-              I love traveling and exploring new places. Being in nature whether it's hiking through forests, visiting lakes and waterfalls, or simply enjoying a scenic view that gives me a deep sense of peace and energy.
-              Sightseeing and experiencing different cultures and landscapes helps me recharge and gain fresh perspectives.
+              I love traveling and exploring new places. Being in nature whether it's hiking through forests, visiting
+              lakes and waterfalls, or simply enjoying a scenic view that gives me a deep sense of peace and energy.
+              Sometimes you just need to get away from all the noise and chill out in nature to clear your head.
             </p>
           </div>
         </div>
@@ -493,7 +566,8 @@
             </div>
             <div class="contact-item">
               <i class="bi bi-linkedin me-2"></i>
-              <a href="https://www.linkedin.com/in/reza-jahadi-28011719a/" target="_blank" class="text-decoration-none">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/reza-jahadi-28011719a/" target="_blank"
+                class="text-decoration-none">LinkedIn</a>
             </div>
             <div class="contact-item">
               <i class="bi bi-github me-2"></i>
@@ -501,11 +575,13 @@
             </div>
             <div class="contact-item">
               <i class="bi bi-google me-2"></i>
-              <a href="https://scholar.google.com/citations?user=BW0lzr4AAAAJ&hl=en" target="_blank" class="text-decoration-none">Google Scholar</a>
+              <a href="https://scholar.google.com/citations?user=BW0lzr4AAAAJ&hl=en" target="_blank"
+                class="text-decoration-none">Google Scholar</a>
             </div>
             <div class="contact-item">
               <i class="bi bi-stack-overflow me-2"></i>
-              <a href="https://stackoverflow.com/users/21004951/rezajh" target="_blank" class="text-decoration-none">Stack Overflow</a>
+              <a href="https://stackoverflow.com/users/21004951/rezajh" target="_blank"
+                class="text-decoration-none">Stack Overflow</a>
             </div>
           </div>
         </div>
@@ -524,7 +600,9 @@
         </div>
         <div class="modal-body" style="color: #000000;">
           <p>
-            This project implements parallel matrix-vector multiplication on the GPU using CUDA with <strong>row-wise decomposition</strong>. Each thread computes one row's dot product, leveraging GPU parallelism to significantly accelerate computation.
+            This project implements parallel matrix-vector multiplication on the GPU using CUDA with <strong>row-wise
+              decomposition</strong>. Each thread computes one row's dot product, leveraging GPU parallelism to
+            significantly accelerate computation.
           </p>
           <p>
             <strong>Key Contributions:</strong><br>
@@ -533,7 +611,9 @@
           </p>
           <p>
             <strong>Result:</strong><br>
-            As shown in the chart, <strong>maximum speedup (~2.9×)</strong> was achieved with <strong>64 threads per block</strong>. Performance gradually decreased beyond that due to GPU overhead and reduced efficiency. At 640 threads per block, speedup dropped close to 1×, indicating minimal benefit over CPU execution.
+            As shown in the chart, <strong>maximum speedup (~2.9×)</strong> was achieved with <strong>64 threads per
+              block</strong>. Performance gradually decreased beyond that due to GPU overhead and reduced efficiency. At
+            640 threads per block, speedup dropped close to 1×, indicating minimal benefit over CPU execution.
           </p>
           <div class="row g-3">
             <div class="col-md-12">
@@ -541,7 +621,8 @@
             </div>
           </div>
           <div class="text-center mt-4">
-            <a href="https://github.com/rezajahadi/cuda-matrix-multiplication" target="_blank" class="btn btn-outline-primary">
+            <a href="https://github.com/rezajahadi/cuda-matrix-multiplication" target="_blank"
+              class="btn btn-outline-primary">
               <i class="bi bi-github me-2"></i>View on GitHub
             </a>
           </div>
@@ -560,13 +641,18 @@
         </div>
         <div class="modal-body" style="color: #000000;">
           <p>
-            This project presents a detailed machine learning analysis of the classic <strong>Iris dataset</strong>. The study involves t-SNE-based data visualization, training Support Vector Machine (SVM) models with different configurations, and implementing a neural network for multi-class classification.
+            This project presents a detailed machine learning analysis of the classic <strong>Iris dataset</strong>. The
+            study involves t-SNE-based data visualization, training Support Vector Machine (SVM) models with different
+            configurations, and implementing a neural network for multi-class classification.
           </p>
           <p>
             <strong>Key Components:</strong><br>
-            • <strong>t-SNE Visualization:</strong> 2D projection of high-dimensional data to identify clustering patterns among flower species.<br>
-            • <strong>Support Vector Machines:</strong> Both linear and polynomial SVMs are trained and compared. Best results achieved using non-linear kernel.<br>
-            • <strong>Neural Network:</strong> Two hidden layers with 60 neurons each, ReLU activation, and Softmax output; trained over 30 epochs.
+            • <strong>t-SNE Visualization:</strong> 2D projection of high-dimensional data to identify clustering
+            patterns among flower species.<br>
+            • <strong>Support Vector Machines:</strong> Both linear and polynomial SVMs are trained and compared. Best
+            results achieved using non-linear kernel.<br>
+            • <strong>Neural Network:</strong> Two hidden layers with 60 neurons each, ReLU activation, and Softmax
+            output; trained over 30 epochs.
           </p>
           <p>
             <strong>Experimental Setup:</strong><br>
@@ -580,25 +666,32 @@
             </div>
           </div>
           <p>
-            As illustrated, we can clearly observe distinct clusters. In the visualization, data points with similar characteristics naturally form clusters. 
-            Iris-versicolor and Iris-virginica appear closely grouped, indicating high similarity between them, while Iris-setosa is distinctly separated from the other two. 
-            This reflects differences in their feature distributions. <strong>The t-SNE algorithm effectively projects high-dimensional data into a 2D space, preserving the intrinsic clustering structure of the original dataset.</strong>
+            As illustrated, we can clearly observe distinct clusters. In the visualization, data points with similar
+            characteristics naturally form clusters.
+            Iris-versicolor and Iris-virginica appear closely grouped, indicating high similarity between them, while
+            Iris-setosa is distinctly separated from the other two.
+            This reflects differences in their feature distributions. <strong>The t-SNE algorithm effectively projects
+              high-dimensional data into a 2D space, preserving the intrinsic clustering structure of the original
+              dataset.</strong>
           </p>
           <p>
             <strong>Performance:</strong><br>
-            <ul>
-              <li>Linear SVM Accuracy: <strong>96%</strong></li>
-              <li>Non-linear SVM Accuracy: <strong>95.81%</strong></li>
-              <li>Neural Network Accuracy: <strong>97.77%</strong></li>
-              <li>ROC AUC Score: <strong>1.00</strong> for all models, indicating perfect class separability</li>
-            </ul>
+          <ul>
+            <li>Linear SVM Accuracy: <strong>96%</strong></li>
+            <li>Non-linear SVM Accuracy: <strong>95.81%</strong></li>
+            <li>Neural Network Accuracy: <strong>97.77%</strong></li>
+            <li>ROC AUC Score: <strong>1.00</strong> for all models, indicating perfect class separability</li>
+          </ul>
           </p>
           <p>
             <strong>Conclusion:</strong><br>
-            The project shows how hyperparameter tuning and model architecture choices can impact classification accuracy. With proper setup, simple models can achieve near-perfect performance on well-structured datasets like Iris.
+            The project shows how hyperparameter tuning and model architecture choices can impact classification
+            accuracy. With proper setup, simple models can achieve near-perfect performance on well-structured datasets
+            like Iris.
           </p>
           <div class="text-center mt-4">
-            <a href="https://github.com/rezajahadi/Iris_SVM_simpleNN_comparison" target="_blank" class="btn btn-outline-primary">
+            <a href="https://github.com/rezajahadi/Iris_SVM_simpleNN_comparison" target="_blank"
+              class="btn btn-outline-primary">
               <i class="bi bi-github me-2"></i>View on GitHub
             </a>
           </div>
@@ -606,9 +699,9 @@
       </div>
     </div>
   </div>
-  
-  
-  
+
+
+
   <!-- Modal for Project 3 -->
   <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
@@ -619,7 +712,9 @@
         </div>
         <div class="modal-body" style="color: #000000;">
           <p>
-            This project demonstrates the deployment of a Convolutional Neural Network (CNN) on the <strong>Kria KV260</strong> edge computing platform using <strong>Vitis AI</strong>. The entire deployment is orchestrated by the <code>run_all.sh</code> script, which automates the required steps on the host machine.
+            This project demonstrates the deployment of a Convolutional Neural Network (CNN) on the <strong>Kria
+              KV260</strong> edge computing platform using <strong>Vitis AI</strong>. The entire deployment is
+            orchestrated by the <code>run_all.sh</code> script, which automates the required steps on the host machine.
           </p>
           <p>
             <strong>Key Technologies:</strong><br>
@@ -629,7 +724,8 @@
           </p>
           <p>
             <strong>Inference Performance Comparison:</strong><br>
-            A performance benchmark was conducted between a traditional host CPU and the Kria KV260 board. Results show a dramatic improvement in inference speed:
+            A performance benchmark was conducted between a traditional host CPU and the Kria KV260 board. Results show
+            a dramatic improvement in inference speed:
           </p>
           <ul>
             <li><strong>Host (Intel Core i7, 4th Gen):</strong> 23.8 FPS on 10,000 images</li>
@@ -643,7 +739,9 @@
           </ul>
           <p>
             <strong>Conclusion:</strong><br>
-            The project highlights the efficiency of deploying AI models on FPGA platforms for real-time inference. The Kria KV260 achieves up to <strong>300× speedup</strong> over CPU inference, demonstrating the viability of FPGA-based solutions for edge ML tasks.
+            The project highlights the efficiency of deploying AI models on FPGA platforms for real-time inference. The
+            Kria KV260 achieves up to <strong>300× speedup</strong> over CPU inference, demonstrating the viability of
+            FPGA-based solutions for edge ML tasks.
           </p>
           <div class="text-center mt-4">
             <a href="https://github.com/rezajahadi/CNN-on-KV260" target="_blank" class="btn btn-outline-primary">
@@ -655,7 +753,7 @@
     </div>
   </div>
 
-    <!-- Modal for Project 4 -->
+  <!-- Modal for Project 4 -->
   <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -665,17 +763,25 @@
         </div>
         <div class="modal-body" style="color: #000000;">
           <p>
-            This project implements CNN inference on the MNIST dataset using C and MPI (Message Passing Interface) for distributed execution across multiple CPUs.
+            This project implements CNN inference on the MNIST dataset using C and MPI (Message Passing Interface) for
+            distributed execution across multiple CPUs.
           </p>
           <p>
             We designed and compared two parallel inference approaches:
           </p>
           <ul>
-            <li><strong>Data Parallelism</strong> (<code>mnist_data.c</code>): Each MPI process runs the full CNN model and processes a different portion of the input data independently. This method is efficient and scales well with minimal communication overhead.</li>
-            <li><strong>Pipeline Parallelism</strong> (<code>mnist.c</code>): CNN layers are distributed across MPI processes, forming a computation pipeline. Each processor handles one or more layers and passes intermediate results to the next, reducing idle time and overlapping computation stages.</li>
+            <li><strong>Data Parallelism</strong> (<code>mnist_data.c</code>): Each MPI process runs the full CNN model
+              and processes a different portion of the input data independently. This method is efficient and scales
+              well with minimal communication overhead.</li>
+            <li><strong>Pipeline Parallelism</strong> (<code>mnist.c</code>): CNN layers are distributed across MPI
+              processes, forming a computation pipeline. Each processor handles one or more layers and passes
+              intermediate results to the next, reducing idle time and overlapping computation stages.</li>
           </ul>
           <p>
-            While the data parallel method tends to offer better performance due to lower inter-process communication, the pipelined approach demonstrates a novel execution pattern that can effectively utilize CPUs in sequence. Despite the communication overhead, pipeline parallelism achieves comparable performance under specific configurations.
+            While the data parallel method tends to offer better performance due to lower inter-process communication,
+            the pipelined approach demonstrates a novel execution pattern that can effectively utilize CPUs in sequence.
+            Despite the communication overhead, pipeline parallelism achieves comparable performance under specific
+            configurations.
           </p>
           <p>
             This technique is particularly valuable because it:
@@ -686,13 +792,16 @@
             <li>Adapts to both model and data parallelism, depending on resource availability</li>
           </ul>
           <p>
-            The project highlights how distributed parallelism strategies can accelerate deep learning inference on CPU clusters—even for relatively small models like those trained on MNIST.
+            The project highlights how distributed parallelism strategies can accelerate deep learning inference on CPU
+            clusters—even for relatively small models like those trained on MNIST.
           </p>
           <p><strong>Result:</strong><br>
-            Although the pipeline method experiences some latency due to inter-process communication, our evaluations show that it performs closely to the data parallel method in practice.
+            Although the pipeline method experiences some latency due to inter-process communication, our evaluations
+            show that it performs closely to the data parallel method in practice.
           </p>
           <p>
-            Following figure shows the execution time (vertical axis) vs the number of nodes (horizontal axis) for the two methods. Also, you can see the speedup for the pipeline method compared to the data parallel method.
+            Following figure shows the execution time (vertical axis) vs the number of nodes (horizontal axis) for the
+            two methods. Also, you can see the speedup for the pipeline method compared to the data parallel method.
           </p>
           <div class="row g-3">
             <div class="col-md-6">
@@ -703,10 +812,12 @@
             </div>
           </div>
           <div class="text-center mt-4">
-            <a href="https://github.com/rezajahadi/Pipeline-CNN-MPI" target="_blank" class="btn btn-outline-primary me-2">
+            <a href="https://github.com/rezajahadi/Pipeline-CNN-MPI" target="_blank"
+              class="btn btn-outline-primary me-2">
               <i class="bi bi-github me-2"></i>View on GitHub
             </a>
-            <a href="https://docs.google.com/presentation/d/1SpQhl-RLW-35fWQhVvF0pXOWFCdKSnKZ/edit?usp=sharing&ouid=109795413513067241131&rtpof=true&sd=true" target="_blank" class="btn btn-outline-primary">
+            <a href="https://docs.google.com/presentation/d/1SpQhl-RLW-35fWQhVvF0pXOWFCdKSnKZ/edit?usp=sharing&ouid=109795413513067241131&rtpof=true&sd=true"
+              target="_blank" class="btn btn-outline-primary">
               <i class="bi bi-file-earmark-slides me-2"></i>View Slides
             </a>
           </div>
@@ -714,8 +825,118 @@
       </div>
     </div>
   </div>
-  
+
+  <!-- Modal for Project 5 -->
+  <div class="modal fade" id="project5Modal" tabindex="-1" aria-labelledby="project5Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project5Label">End-to-End AlexNet Training and Quantization on CIFAR-10</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <p>
+            This project demonstrates a complete pipeline for training, quantizing, and testing an
+            <strong>AlexNet</strong> model on the <strong>CIFAR-10</strong> dataset using PyTorch. It includes all
+            stages from data preprocessing and model design to post-training quantization and deployment-ready model
+            export.
+          </p>
+          <p>
+            <strong>Project Pipeline:</strong><br>
+            • Built a custom AlexNet architecture adapted for CIFAR-10's 10-class image classification task<br>
+            • Implemented a full training loop with PyTorch, using SGD optimizer and CrossEntropyLoss<br>
+            • Evaluated model performance using accuracy and ROC AUC metrics on 10,000 test images<br>
+            • Applied <strong>post-training quantization</strong> using the Vitis AI <code>pytorch_nndct</code>
+            toolkit<br>
+            • Exported the quantized model to <code>.xmodel</code>, <code>.onnx</code>, and <code>.jit.pt</code> formats
+            for hardware deployment
+          </p>
+          <p>
+            <strong>Technical Highlights:</strong><br>
+            • Framework: PyTorch, Torchvision<br>
+            • Quantization: Vitis AI (pytorch_nndct), 8-bit integer quantization<br>
+            • Dataset: CIFAR-10, resized and normalized for AlexNet input compatibility<br>
+            • Deployment Support: Xilinx DPU-compatible model exports with <100ms inference latency </p>
+              <p>
+                <strong>Results:</strong><br>
+                • Achieved <strong>86.6%</strong> classification accuracy on the CIFAR-10 test set<br>
+                • Successfully converted the trained model to quantized deployment formats without modifying
+                architecture or retraining<br>
+                • All quantized models preserved class separability (ROC AUC = 1.00)<br>
+                • Pipeline is fully automated for training, calibration, testing, and export
+              </p>
+              <div class="row g-3">
+                <div class="col-md-12 text-center">
+                  <img src="alexnet_training_results.png" class="img-fluid rounded" alt="AlexNet Training Results">
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="https://github.com/rezajahadi/Alexnet-Cirfar10" target="_blank"
+                  class="btn btn-outline-primary">
+                  <i class="bi bi-github me-2"></i>View on GitHub
+                </a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Modal for Project 6 -->
+  <div class="modal fade" id="project6Modal" tabindex="-1" aria-labelledby="project6Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project6Label">High-Precision Arithmetic Engine in C++</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <p>
+            Designed and developed a C++ engine for performing arithmetic operations on extremely large integers (up to
+            200 digits),
+            bypassing the limitations of built-in data types. This system accurately handles signed integer calculations
+            using
+            string-based algorithms, making it ideal for cryptographic, mathematical, or embedded applications where
+            precision is critical.
+          </p>
+          <p>
+            <strong>Key Features:</strong><br>
+            • <strong>Supports Arbitrary Precision:</strong> Handles integers far beyond the range of `int` or `long`
+            types<br>
+            • <strong>Comprehensive Arithmetic Support:</strong> Addition, subtraction, multiplication, division,
+            exponentiation, and square root<br>
+            • <strong>Signed Number Handling:</strong> Full support for negative values and proper sign-aware
+            computation<br>
+            • <strong>Robust Input Validation:</strong> Ensures numeric integrity before processing
+          </p>
+          <p>
+            <strong>Technical Implementation:</strong><br>
+            • Language: Standard C++ (no external libraries)<br>
+            • Algorithm Design: Manual digit-wise arithmetic logic using strings<br>
+            • UI: Text-based interactive console menu<br>
+            • Max Input Size: 200-digit integers
+          </p>
+          <p>
+            <strong>Highlights:</strong><br>
+            • Accurately performs operations on numbers larger than 10<sup>199</sup><br>
+            • Square root implementation using digit-wise estimation<br>
+            • Includes internal utility functions for zero trimming, absolute comparison, and order tracking<br>
+            • All operations work on user-entered values with minimal delay
+          </p>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/highPrecision-arithmetic-engine" target="_blank"
+              class="btn btn-outline-primary">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </body>
-</html>
 
+</html>
