@@ -6,31 +6,251 @@
   <title>Reza Jahadi</title>
   <link rel="icon" type="image/png" href="logo.png" sizes="128x128">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <style>
+    :root {
+      --primary-color: #0a192f;
+      --secondary-color: #112240;
+      --accent-color: #64ffda;
+      --text-color: #ccd6f6;
+      --light-bg: #f5f6fa;
+      --dark-bg: #0a192f;
+    }
+
     html {
       scroll-behavior: smooth;
     }
+
     body {
-      padding-top: 120px;
+      padding-top: 0;
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
     }
+
+    /* Hero Section */
+    .hero-section {
+      background: #f8f9fa;
+      padding: 120px 0 80px;
+      position: relative;
+    }
+
     .profile-img {
-      width: 150px;
-      border-radius: 50%;
-      margin: 20px 0;
+      width: 160px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
     }
-    .project-card {
-      margin-bottom: 20px;
+
+    .profile-img:hover {
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero-text {
+      padding: 2rem 0;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #000000;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    @media (max-width: 991.98px) {
+      .hero-section {
+        text-align: center;
+      }
+      .hero-text {
+        margin-top: 2rem;
+      }
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(45, 52, 54, 0.95) !important;
+      backdrop-filter: blur(10px);
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand img {
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand:hover img {
+      transform: scale(1.1);
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      padding: 8px 16px !important;
+      margin: 0 5px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+
+    .nav-link.active {
+      background: var(--secondary-color);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    section:nth-child(even) {
+      background: var(--light-bg);
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 50px;
+      padding-bottom: 15px;
+      color: #000000;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--secondary-color);
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-body {
+      padding: 25px;
+    }
+
+    .card-title {
+      color: #000000;
+      font-weight: 600;
+    }
+
+    .card-text {
+      color: #000000;
+    }
+
+    .badge {
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* Contact Section */
+    .contact-item {
+      padding: 15px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      margin-bottom: 10px;
+    }
+
+    .contact-item:hover {
+      background: var(--light-bg);
+      transform: translateX(10px);
+    }
+
+    .contact-item i {
+      color: var(--secondary-color);
+      font-size: 1.2em;
+    }
+
+    /* Buttons */
+    .btn {
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--secondary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* Modal */
+    .modal-content {
+      border-radius: 15px;
+      border: none;
+    }
+
+    .modal-header {
+      background: var(--primary-color);
+      color: white;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .modal-body {
+      padding: 25px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease forwards;
+    }
+
+    /* Card Subtitles */
+    .card-subtitle {
+      color: #000000;
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
   <!-- Navbar -->
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" alt="Logo" height="50">
+        <img src="logo.png" alt="Logo" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -56,48 +276,74 @@
       </div>
     </div>
   </nav>
-  
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <img src="profile.jpg" alt="profile" class="profile-img">
+        </div>
+        <div class="col-lg-8">
+          <div class="hero-text">
+            <h1 class="hero-title">Reza Jahadi</h1>
+            <p class="hero-subtitle">AI Engineer & Researcher | Deep Learning Specialist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- About Me -->
-  <section id="about" class="container text-center">
-    <h2 class="mb-4">About Me</h2>
-  
-    <img src="profile.jpg" alt="profile"
-         class="img-fluid rounded mb-4"
-         style="max-width: 200px; height: auto;">
-  
-    <p class="mb-4">
-        Hello! I'm Reza, a passionate AI engineer and researcher with a strong focus on deep learning, model optimization, and large language models across all modalities.
-        I thrive on challenges and love pushing the boundaries of what's possible with efficient ML systems.
-        I'm a self-learner and a proactive problem solver, always exploring new techniques and tools to improve performance and scalability.
-        My work spans pruning, quantization, and deployment of transformer-based models, especially in real-world constrained environments.
-    </p>  
+  <section id="about" class="container">
+    <h2 class="section-title text-center">About Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <p class="lead mb-4" style="color: #000000; text-align: justify;">
+          Hello! I'm Reza, a passionate AI engineer and researcher with a strong focus on deep learning, model optimization, and large language models across all modalities.
+          I thrive on challenges and love pushing the boundaries of what's possible with efficient ML systems.
+        </p>
+        <p class="lead" style="color: #000000; text-align: justify;">
+          I'm a self-learner and a proactive problem solver, always exploring new techniques and tools to improve performance and scalability.
+          My work spans pruning, quantization, and deployment of transformer-based models, especially in real-world constrained environments.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="container mt-5">
-    <h2 class="text-center mb-4">Projects</h2>
+  <section id="projects" class="container">
+    <h2 class="section-title text-center">Projects</h2>
     <div class="row g-4">
       <!-- Project 1 -->
-      <div class="col-md-6 d-flex">
-        <div class="card h-100 w-100">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">LLM Pruning Framework</h5>
-            <p class="card-text">Pruned large language models using unstructured Hessian-based methods. Zero-shot, no retraining.</p>
-            <div class="mt-auto">
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Parallel matrix-vector multiplication on GPU</h5>
+            <p class="card-text">Performing matrix-vector multiplication using row-wise decomposition on GPU and measuring the speedup.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">CUDA</span>
+                <span class="badge bg-secondary">C</span>
+              </div>
               <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Read More</button>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Project 2 -->
-      <div class="col-md-6 d-flex">
-        <div class="card h-100 w-100">
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Distributed CNN Inference</h5>
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Distributed CNN Inference on MNIST</h5>
             <p class="card-text">Implemented MPI-based CNN inference with pipelining on CPU clusters for speedup.</p>
-            <div class="mt-auto">
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">CNN</span>
+                <span class="badge bg-info">C</span>
+                <span class="badge bg-secondary">Distributed Systems</span>
+              </div>
               <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Read More</button>
             </div>
           </div>
@@ -105,19 +351,17 @@
       </div>
     </div>
   </section>
-  
-  
 
   <!-- Publications -->
-  <section id="publications" class="container mt-5">
-    <h2 class="text-center mb-4">Publications</h2>
+  <section id="publications" class="container">
+    <h2 class="section-title text-center">Publications</h2>
     <div class="row g-4">
       <!-- Publication 1 -->
       <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100">
           <div class="card-body">
             <h5 class="card-title">Low-Power Register File for Tensor Cores</h5>
-            <h6 class="card-subtitle mb-2 text-muted">2024 IEEE 15th International Green and Sustainable Computing Conference (IGSC)</h6>
+            <h6 class="card-subtitle mb-3 text-muted">2024 IEEE 15th International Green and Sustainable Computing Conference (IGSC)</h6>
             <p class="card-text">
               <small class="text-muted">
                 <i class="bi bi-people me-1"></i>Authors: Reza Jahadi, Ehsan Atoofian
@@ -125,19 +369,17 @@
             </p>
             <p class="card-text">
               We propose a value-aware register file design for Tensor Cores that leverages the bit-level sparsity in CNNs to reduce leakage power. 
-              By introducing LPS, LPS+, and PLPS+ SRAM cells, we achieve up to 77.3% power savings with negligible accuracy loss by dynamically flipping bits and exploiting precision tolerance in deep learning workloads.
+              By introducing LPS, LPS+, and PLPS+ SRAM cells, we achieve up to 77.3% power savings with negligible accuracy loss.
             </p>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
                 <span class="badge bg-primary me-2">CNN Optimization</span>
                 <span class="badge bg-secondary me-2">GPU Tensor Cores</span>
                 <span class="badge bg-info">Computer Architecture</span>
               </div>
-              <div>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10765817" target="_blank" class="btn btn-outline-primary btn-sm">
-                  <i class="bi bi-file-earmark-text me-1"></i>Paper
-                </a>
-              </div>
+              <a href="https://ieeexplore.ieee.org/abstract/document/10765817" target="_blank" class="btn btn-outline-primary">
+                <i class="bi bi-file-earmark-text me-1"></i>Paper
+              </a>
             </div>
           </div>
         </div>
@@ -145,10 +387,10 @@
 
       <!-- Publication 2 -->
       <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100">
           <div class="card-body">
-            <h5 class="card-title">PCTC: Hardware and Software Co-design for Pruned Capsule Networks on Tensor Cores</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Euro-Par 2024: Parallel Processing</h6>
+            <h5 class="card-title">PCTC: Hardware and Software Co-design for Pruned Capsule Networks</h5>
+            <h6 class="card-subtitle mb-3 text-muted">Euro-Par 2024: Parallel Processing</h6>
             <p class="card-text">
               <small class="text-muted">
                 <i class="bi bi-people me-1"></i>Authors: Mohammad Hafezan, Reza Jahadi & Ehsan Atoofian
@@ -156,19 +398,17 @@
             </p>
             <p class="card-text">
               We present PCTC, a co-designed hardware-software approach that enables efficient execution of Capsule Networks on NVIDIA Tensor Cores. 
-              By rearchitecting matrix-vector operations and introducing structured pruning tailored to capsule layers, PCTC achieves up to 31% energy savings with minimal accuracy loss.
+              By rearchitecting matrix-vector operations and introducing structured pruning tailored to capsule layers, PCTC achieves up to 31% energy savings.
             </p>
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mt-4">
               <div>
                 <span class="badge bg-primary me-2">Neural Networks</span>
                 <span class="badge bg-secondary me-2">Tensor Core Optimization</span>
                 <span class="badge bg-info">GPU</span>
               </div>
-              <div>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-69766-1_14" target="_blank" class="btn btn-outline-primary btn-sm">
-                  <i class="bi bi-file-earmark-text me-1"></i>Paper
-                </a>
-              </div>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-031-69766-1_14" target="_blank" class="btn btn-outline-primary">
+                <i class="bi bi-file-earmark-text me-1"></i>Paper
+              </a>
             </div>
           </div>
         </div>
@@ -177,99 +417,164 @@
   </section>
 
   <!-- Hobbies -->
-  <section id="hobbies" class="container mt-5 text-center">
-    <h2 class="mb-4">Hobbies</h2>
-    <p>
-      I'm a big fan of movies—especially thriller and mystery genres. I enjoy stories that keep me guessing, with clever plot twists, psychological depth, and suspenseful narratives.
-      Films like Prisoners, Gone Girl, and The Prestige fascinate me with their intricate storytelling and character development.
-      I find inspiration in how these stories are crafted, and they often spark my curiosity about human behavior and decision-making.
-    </p>
-    <p>
-      I also love traveling and exploring new places. Being in nature—whether it's hiking through forests, visiting lakes and waterfalls, or simply enjoying a scenic view—gives me a deep sense of peace and energy.
-      Sightseeing and experiencing different cultures and landscapes helps me recharge and gain fresh perspectives both in life and in work.
-    </p>
+  <section id="hobbies" class="container text-center">
+    <h2 class="section-title">Hobbies</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="bi bi-film me-2"></i>Movies</h5>
+            <p class="card-text">
+              I'm a big fan of movies—especially thriller and mystery genres. I enjoy stories that keep me guessing, with clever plot twists, psychological depth, and suspenseful narratives.
+              Films like Prisoners, Gone Girl, and The Prestige fascinate me with their intricate storytelling and character development.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-3"><i class="bi bi-globe me-2"></i>Travel</h5>
+            <p class="card-text">
+              I love traveling and exploring new places. Being in nature—whether it's hiking through forests, visiting lakes and waterfalls, or simply enjoying a scenic view—gives me a deep sense of peace and energy.
+              Sightseeing and experiencing different cultures and landscapes helps me recharge and gain fresh perspectives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  
 
   <!-- Contact -->
-  <section id="contact" class="container mt-5 text-center">
-    <h2 class="mb-4">Contact</h2>
+  <section id="contact" class="container text-center">
+    <h2 class="section-title">Contact</h2>
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <i class="bi bi-envelope me-2"></i>
-            Email: rz.jahadihoseini@gmail.com
-          </li>
-          <li class="list-group-item">
-            <a href="https://www.linkedin.com/in/reza-jahadi-28011719a/" target="_blank" class="text-decoration-none">
-              <i class="bi bi-linkedin me-2"></i> LinkedIn
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://github.com/rezajahadi" target="_blank" class="text-decoration-none">
-              <i class="bi bi-github me-2"></i> GitHub
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://scholar.google.com/citations?user=BW0lzr4AAAAJ&hl=en" target="_blank" class="text-decoration-none">
-              <i class="bi bi-google me-2"></i> Google Scholar
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://stackoverflow.com/users/21004951/rezajh" target="_blank" class="text-decoration-none">
-              <i class="bi bi-stack-overflow me-2"></i> Stack Overflow
-            </a>
-          </li>
-        </ul>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <div class="contact-item">
+              <i class="bi bi-envelope me-2"></i>
+              <a href="mailto:rz.jahadihoseini@gmail.com" class="text-decoration-none">rz.jahadihoseini@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-linkedin me-2"></i>
+              <a href="https://www.linkedin.com/in/reza-jahadi-28011719a/" target="_blank" class="text-decoration-none">LinkedIn</a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-github me-2"></i>
+              <a href="https://github.com/rezajahadi" target="_blank" class="text-decoration-none">GitHub</a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-google me-2"></i>
+              <a href="https://scholar.google.com/citations?user=BW0lzr4AAAAJ&hl=en" target="_blank" class="text-decoration-none">Google Scholar</a>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-stack-overflow me-2"></i>
+              <a href="https://stackoverflow.com/users/21004951/rezajh" target="_blank" class="text-decoration-none">Stack Overflow</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Modal for Project 1 -->
-<div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1Label" aria-hidden="true">
+  <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="project1Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="project1Label">LLM Pruning Framework</h5>
+          <h5 class="modal-title" id="project1Label">Matrix-Vector Multiplication using CUDA</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="color: #000000;">
           <p>
-            This project focused on efficient pruning of large language models using Hessian-based importance scoring. The technique eliminates low-importance weights in a zero-shot fashion without retraining.
+            This project implements parallel matrix-vector multiplication on the GPU using CUDA with <strong>row-wise decomposition</strong>. Each thread computes one row's dot product, leveraging GPU parallelism to significantly accelerate computation.
           </p>
           <p>
-            It supports GPT-2 and BERT architectures and has been evaluated across multiple datasets for perplexity and FLOP reduction tradeoffs.
+            <strong>Key Contributions:</strong><br>
+            • Designed a CUDA kernel with varying <code>threads_per_block</code> configurations (32 to 640).<br>
+            • Measured performance (speedup vs CPU) for each setup.
           </p>
-          <img src="simulation1.png" class="img-fluid rounded mb-3" alt="Simulation 1">
-          <img src="simulation2.png" class="img-fluid rounded" alt="Simulation 2">
+          <p>
+            <strong>Result:</strong><br>
+            As shown in the chart, <strong>maximum speedup (~2.9×)</strong> was achieved with <strong>64 threads per block</strong>. Performance gradually decreased beyond that due to GPU overhead and reduced efficiency. At 640 threads per block, speedup dropped close to 1×, indicating minimal benefit over CPU execution.
+          </p>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <img src="speedup.jpg" class="img-fluid rounded" alt="Speedup Simulation">
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/cuda-matrix-multiplication" target="_blank" class="btn btn-outline-primary">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   
+
   <!-- Modal for Project 2 -->
   <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="project2Label">Distributed CNN Inference</h5>
+          <h5 class="modal-title" id="project2Label">Distributed CNN Inference on MNIST</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="color: #000000;">
           <p>
-            This C-based project implemented a CNN inference pipeline distributed via MPI. Layers were pipelined across CPU nodes with dynamic allocation to achieve parallelism and reduce idle time.
+            This project implements CNN inference on the MNIST dataset using C and MPI (Message Passing Interface) for distributed execution across multiple CPUs.
           </p>
           <p>
-            Performance was benchmarked using the MNIST dataset. Speedups were analyzed based on number of nodes and layer splits.
+            We designed and compared two parallel inference approaches:
           </p>
-          <img src="cnn-simulation1.png" class="img-fluid rounded mb-3" alt="CNN Pipeline">
-          <img src="cnn-simulation2.png" class="img-fluid rounded" alt="Performance Plot">
+          <ul>
+            <li><strong>Data Parallelism</strong> (<code>mnist_data.c</code>): Each MPI process runs the full CNN model and processes a different portion of the input data independently. This method is efficient and scales well with minimal communication overhead.</li>
+            <li><strong>Pipeline Parallelism</strong> (<code>mnist.c</code>): CNN layers are distributed across MPI processes, forming a computation pipeline. Each processor handles one or more layers and passes intermediate results to the next, reducing idle time and overlapping computation stages.</li>
+          </ul>
+          <p>
+            While the data parallel method tends to offer better performance due to lower inter-process communication, the pipelined approach demonstrates a novel execution pattern that can effectively utilize CPUs in sequence. Despite the communication overhead, pipeline parallelism achieves comparable performance under specific configurations.
+          </p>
+          <p>
+            This technique is particularly valuable because it:
+          </p>
+          <ul>
+            <li>Maximizes processor utilization through overlapped execution</li>
+            <li>Introduces pipelined execution to reduce layer-wise bottlenecks</li>
+            <li>Adapts to both model and data parallelism, depending on resource availability</li>
+          </ul>
+          <p>
+            The project highlights how distributed parallelism strategies can accelerate deep learning inference on CPU clusters—even for relatively small models like those trained on MNIST.
+          </p>
+          <p><strong>Result:</strong><br>
+            Although the pipeline method experiences some latency due to inter-process communication, our evaluations show that it performs closely to the data parallel method in practice.
+          </p>
+          <p>
+            Following figure shows the execution time (vertical axis) vs the number of nodes (horizontal axis) for the two methods. Also, you can see the speedup for the pipeline method compared to the data parallel method.
+          </p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="Picture1.png" class="img-fluid rounded" alt="Execution Time vs Number of Nodes">
+            </div>
+            <div class="col-md-6">
+              <img src="Picture2.png" class="img-fluid rounded" alt="Speedup vs Number of Nodes">
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/Pipeline-CNN-MPI" target="_blank" class="btn btn-outline-primary me-2">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+            <a href="https://docs.google.com/presentation/d/1SpQhl-RLW-35fWQhVvF0pXOWFCdKSnKZ/edit?usp=sharing&ouid=109795413513067241131&rtpof=true&sd=true" target="_blank" class="btn btn-outline-primary">
+              <i class="bi bi-file-earmark-slides me-2"></i>View Slides
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   
+
 </body>
 </html>
+
