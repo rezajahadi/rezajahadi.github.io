@@ -332,41 +332,44 @@
         </div>
       </div>
 
-      <!-- Project 1 Duplicate -->
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Parallel matrix-vector multiplication on GPU</h5>
-            <p class="card-text">Performing matrix-vector multiplication using row-wise decomposition on GPU and measuring the speedup.</p>
-            <div class="d-flex justify-content-between align-items-center mt-4">
-              <div>
-                <span class="badge bg-primary me-2">CUDA</span>
-                <span class="badge bg-secondary">C</span>
-              </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 1 Duplicate 2 -->
-      <div class="col-md-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Parallel matrix-vector multiplication on GPU</h5>
-            <p class="card-text">Performing matrix-vector multiplication using row-wise decomposition on GPU and measuring the speedup.</p>
-            <div class="d-flex justify-content-between align-items-center mt-4">
-              <div>
-                <span class="badge bg-primary me-2">CUDA</span>
-                <span class="badge bg-secondary">C</span>
-              </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project1Modal">Read More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Project 2 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Iris dataset analysis using SVM and Neural Networds</h5>
+            <p class="card-text">The primary focus of this project is on data visualization, training Support Vector Machine (SVM) models, and building a neural network for classification tasks.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">Python</span>
+                <span class="badge bg-secondary">Machine Learning</span>
+                <span class="badge bg-secondary">Neural Network</span>
+              </div>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">CNN acceleration on edge devices</h5>
+            <p class="card-text">Deploying a CNN model on Kria KV260 edge device and measuring the inference performance.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">Python</span>
+                <span class="badge bg-primary me-2">CNN</span>
+                <span class="badge bg-secondary">Bash</span>
+                <span class="badge bg-secondary">Linux</span>
+              </div>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project3Modal">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
       <div class="col-md-6">
         <div class="card h-100">
           <div class="card-body">
@@ -378,7 +381,7 @@
                 <span class="badge bg-info">C</span>
                 <span class="badge bg-secondary">Distributed Systems</span>
               </div>
-              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project2Modal">Read More</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project4Modal">Read More</button>
             </div>
           </div>
         </div>
@@ -546,14 +549,118 @@
       </div>
     </div>
   </div>
-  
 
   <!-- Modal for Project 2 -->
   <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="project2Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="project2Label">Distributed CNN Inference on MNIST</h5>
+          <h5 class="modal-title" id="project2Label">Iris Dataset Analysis with SVM and Neural Network</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <p>
+            This project presents a detailed machine learning analysis of the classic <strong>Iris dataset</strong>. The study involves t-SNE-based data visualization, training Support Vector Machine (SVM) models with different configurations, and implementing a neural network for multi-class classification.
+          </p>
+          <p>
+            <strong>Key Components:</strong><br>
+            • <strong>t-SNE Visualization:</strong> 2D projection of high-dimensional data to identify clustering patterns among flower species.<br>
+            • <strong>Support Vector Machines:</strong> Both linear and polynomial SVMs are trained and compared. Best results achieved using non-linear kernel.<br>
+            • <strong>Neural Network:</strong> Two hidden layers with 60 neurons each, ReLU activation, and Softmax output; trained over 30 epochs.
+          </p>
+          <p>
+            <strong>Experimental Setup:</strong><br>
+            • Data split: 70% training / 30% test<br>
+            • Libraries: Scikit-learn, Matplotlib, Seaborn, Keras<br>
+            • Optimization strategies include tuning the regularization parameter <code>C</code> and loss functions
+          </p>
+          <div class="row g-3">
+            <div class="col-md-12 text-center">
+              <img src="SVM.png" class="img-fluid rounded" alt="SVM Visualization">
+            </div>
+          </div>
+          <p>
+            As illustrated, we can clearly observe distinct clusters. In the visualization, data points with similar characteristics naturally form clusters. 
+            Iris-versicolor and Iris-virginica appear closely grouped, indicating high similarity between them, while Iris-setosa is distinctly separated from the other two. 
+            This reflects differences in their feature distributions. <strong>The t-SNE algorithm effectively projects high-dimensional data into a 2D space, preserving the intrinsic clustering structure of the original dataset.</strong>
+          </p>
+          <p>
+            <strong>Performance:</strong><br>
+            <ul>
+              <li>Linear SVM Accuracy: <strong>96%</strong></li>
+              <li>Non-linear SVM Accuracy: <strong>95.81%</strong></li>
+              <li>Neural Network Accuracy: <strong>97.77%</strong></li>
+              <li>ROC AUC Score: <strong>1.00</strong> for all models, indicating perfect class separability</li>
+            </ul>
+          </p>
+          <p>
+            <strong>Conclusion:</strong><br>
+            The project shows how hyperparameter tuning and model architecture choices can impact classification accuracy. With proper setup, simple models can achieve near-perfect performance on well-structured datasets like Iris.
+          </p>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/Iris_SVM_simpleNN_comparison" target="_blank" class="btn btn-outline-primary">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- Modal for Project 3 -->
+  <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="project3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project3Label">Kria KV260 CNN Deployment with Vitis AI</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <p>
+            This project demonstrates the deployment of a Convolutional Neural Network (CNN) on the <strong>Kria KV260</strong> edge computing platform using <strong>Vitis AI</strong>. The entire deployment is orchestrated by the <code>run_all.sh</code> script, which automates the required steps on the host machine.
+          </p>
+          <p>
+            <strong>Key Technologies:</strong><br>
+            • <strong>Vitis AI</strong> – Xilinx's framework for deploying ML models on FPGAs<br>
+            • <strong>FPGA Acceleration</strong> – Harnessing customizable, low-latency inference on hardware<br>
+            • <strong>Kria KV260</strong> – Zynq UltraScale+ MPSoC board optimized for edge AI applications
+          </p>
+          <p>
+            <strong>Inference Performance Comparison:</strong><br>
+            A performance benchmark was conducted between a traditional host CPU and the Kria KV260 board. Results show a dramatic improvement in inference speed:
+          </p>
+          <ul>
+            <li><strong>Host (Intel Core i7, 4th Gen):</strong> 23.8 FPS on 10,000 images</li>
+            <li><strong>Kria KV260:</strong>
+              <ul>
+                <li>1 Thread: 3,972.87 FPS</li>
+                <li>2 Threads: 6,698.55 FPS</li>
+                <li>3 Threads: 7,341.93 FPS</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            <strong>Conclusion:</strong><br>
+            The project highlights the efficiency of deploying AI models on FPGA platforms for real-time inference. The Kria KV260 achieves up to <strong>300× speedup</strong> over CPU inference, demonstrating the viability of FPGA-based solutions for edge ML tasks.
+          </p>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/CNN-on-KV260" target="_blank" class="btn btn-outline-primary">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal for Project 4 -->
+  <div class="modal fade" id="project4Modal" tabindex="-1" aria-labelledby="project4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project4Label">Distributed CNN Inference on MNIST</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body" style="color: #000000;">
