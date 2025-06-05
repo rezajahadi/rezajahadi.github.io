@@ -33,6 +33,7 @@
       background: #f8f9fa;
       padding: 120px 0 30px;
       position: relative;
+      padding-top: 100px;
     }
 
     .profile-img {
@@ -86,11 +87,13 @@
     .navbar {
       background: rgba(45, 52, 54, 0.95) !important;
       backdrop-filter: blur(10px);
-      padding: 15px 0;
+      padding: 8px 0;
       transition: all 0.3s ease;
+      height: 60px;
     }
 
     .navbar-brand img {
+      height: 35px;
       transition: transform 0.3s ease;
     }
 
@@ -101,10 +104,11 @@
     .nav-link {
       color: white !important;
       font-weight: 500;
-      padding: 8px 16px !important;
-      margin: 0 5px;
+      padding: 6px 12px !important;
+      margin: 0 3px;
       border-radius: 20px;
       transition: all 0.3s ease;
+      font-size: 0.95rem;
     }
 
     .nav-link:hover {
@@ -114,6 +118,39 @@
 
     .nav-link.active {
       background: var(--secondary-color);
+    }
+
+    /* Mobile Navbar Styles */
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background: rgba(45, 52, 54, 0.98);
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-nav {
+        padding: 10px 0;
+      }
+
+      .nav-item {
+        margin: 5px 0;
+      }
+
+      .nav-link {
+        padding: 10px 15px !important;
+        margin: 0;
+        border-radius: 8px;
+      }
+
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .nav-link.active {
+        background: var(--secondary-color);
+      }
     }
 
     /* Sections */
@@ -226,6 +263,15 @@
       border-radius: 15px 15px 0 0;
     }
 
+    .modal-header .btn-close {
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+    }
+
+    .modal-header .btn-close:hover {
+      opacity: 1;
+    }
+
     .modal-body {
       padding: 25px;
     }
@@ -250,6 +296,167 @@
     /* Card Subtitles */
     .card-subtitle {
       color: #000000;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 100px 0 20px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .profile-img {
+        width: 140px;
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      .card {
+        margin-bottom: 20px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+      }
+
+      .card-text {
+        font-size: 0.95rem;
+      }
+
+      .badge {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+      }
+
+      .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+      }
+
+      .contact-item {
+        padding: 10px;
+      }
+
+      .contact-item i {
+        font-size: 1.1em;
+      }
+
+      .modal-dialog {
+        margin: 10px;
+      }
+
+      .modal-body {
+        padding: 15px;
+      }
+
+      .modal-body img {
+        margin-bottom: 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 80px 0 15px;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 180px;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .navbar-brand img {
+        height: 30px;
+      }
+
+      .nav-link {
+        padding: 6px 12px !important;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Improve image responsiveness */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Improve modal responsiveness */
+    .modal-dialog {
+      max-width: 95%;
+      margin: 1.75rem auto;
+    }
+
+    /* Improve card grid responsiveness */
+    .row {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+
+    .col-md-6, .col-lg-4 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    /* Improve text readability on mobile */
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    /* Improve button and badge spacing on mobile */
+    @media (max-width: 576px) {
+      .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .d-flex.justify-content-between .btn {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .badge {
+        margin-bottom: 5px;
+      }
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -310,12 +517,12 @@
     <h2 class="section-title text-center">About Me</h2>
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <p class="lead mb-4" style="color: #000000; text-align: justify;">
+        <p class="lead mb-4" style="color: #000000;">
           Hello! I'm Reza, a passionate AI engineer and researcher with a strong focus on deep learning, model
           optimization, and large language models across all modalities.
           I thrive on challenges and love pushing the boundaries of what's possible with efficient ML systems.
         </p>
-        <p class="lead" style="color: #000000; text-align: justify;">
+        <p class="lead" style="color: #000000;">
           I'm a self-learner and a proactive problem solver, always exploring new techniques and tools to improve
           performance and scalability.
           My work spans pruning, quantization, and deployment of transformer-based models, especially in real-world
