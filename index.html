@@ -505,7 +505,7 @@
         <div class="col-lg-8">
           <div class="hero-text">
             <h1 class="hero-title">Reza Jahadi</h1>
-            <p class="hero-subtitle">AI Engineer & Researcher | Deep Learning Specialist</p>
+            <p class="hero-subtitle">AI Engineer & Researcher | CNN, DNN, LLM</p>
           </div>
         </div>
       </div>
@@ -649,6 +649,25 @@
                 <span class="badge bg-secondary">Algorithms</span>
               </div>
               <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project6Modal">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Face Detection & Verification App</h5>
+            <p class="card-text">A desktop application that detects and verifies passenger identities using face recognition and passport data, matching live webcam images with stored passport photos.</p>
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div>
+                <span class="badge bg-primary me-2">Python</span>
+                <span class="badge bg-primary me-2">Deep Learning</span>
+                <span class="badge bg-secondary">Computer Vision</span>
+                <span class="badge bg-secondary">SQLite</span>
+              </div>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#project7Modal">Read More</button>
             </div>
           </div>
         </div>
@@ -1135,6 +1154,54 @@
           <div class="text-center mt-4">
             <a href="https://github.com/rezajahadi/highPrecision-arithmetic-engine" target="_blank"
               class="btn btn-outline-primary">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Project 7 -->
+  <div class="modal fade" id="project7Modal" tabindex="-1" aria-labelledby="project7Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="project7Label">Face Detection & Verification App</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" style="color: #000000;">
+          <p>
+            This is a desktop face recognition system designed to identify and verify passengers using a combination of facial recognition and passport data. The application allows airport staff or security personnel to quickly match a passenger's live webcam image with their stored passport photo, helping to automate and secure the identity verification process.
+          </p>
+          <p>
+            <strong>Technical Overview:</strong><br>
+            The system employs a hybrid deep learning and traditional image processing pipeline:
+          </p>
+          <ul>
+            <li><strong>Face Detection:</strong> Performed using Haar Cascade classifiers</li>
+            <li><strong>Face Verification:</strong> Uses facial embeddings extracted via a fine-tuned VGG-based model</li>
+            <li><strong>Similarity Measurement:</strong> Cosine similarity and Euclidean distance for identity confidence</li>
+            <li><strong>Model Fine-Tuning:</strong> LBPH (Local Binary Patterns Histogram) recognizer for incremental learning</li>
+          </ul>
+          <p>
+            <strong>How It Works:</strong><br>
+            1. User inputs passenger's passport number through PyQt5 GUI<br>
+            2. System retrieves passenger details and displays them<br>
+            3. Live webcam feed captures passenger image<br>
+            4. Face detection and embedding extraction performed<br>
+            5. Comparison with stored passport photo for verification<br>
+            6. Support for adding new faces and model fine-tuning
+          </p>
+          <p>
+            <strong>Technologies Used:</strong><br>
+            • Python, PyQt5, OpenCV<br>
+            • TensorFlow, VGGNet (for embeddings)<br>
+            • Haar Cascade, LBPH Face Recognizer<br>
+            • SQLite for passenger database
+          </p>
+          <div class="text-center mt-4">
+            <a href="https://github.com/rezajahadi/airport-authentication/tree/master" target="_blank" class="btn btn-outline-primary">
               <i class="bi bi-github me-2"></i>View on GitHub
             </a>
           </div>
